@@ -1,7 +1,20 @@
 $(document).ready(function() {
   $(".type--carousel").owlCarousel({
     items: 4,
-    dots: true
+    dots: true,
+    responsive : {
+      // breakpoint from 480 up
+      0:{
+        items: 2
+      },
+      640 : {
+          items: 3
+      },
+      // breakpoint from 768 up
+      852 : {
+          items: 3
+      }
+    }
   });
 
   $('.nav--search input').on('input', function() {
@@ -22,5 +35,9 @@ $(document).ready(function() {
     items: itemsToShow,
     dotsEach: itemsToShow
   });
+
+  $('.menu-toggle').on('click', function() {
+    $('.nav--bottom-menu-left').toggleClass('menu-active');
+  })
 
 });

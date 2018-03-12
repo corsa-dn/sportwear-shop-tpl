@@ -123,7 +123,7 @@ body {
       color: white;
       font-family: 'Ubuntu';
       font-size: 1.5rem;
-      width: auto;
+      width: 100%;
       padding-left: 14px;
       padding-right: 50px; }
       .nav--search input:focus {
@@ -133,20 +133,54 @@ body {
   .nav--bottom-menu {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
-    background-color: #4f4f4f; }
+    background-color: #4f4f4f;
+    position: relative; }
+    .nav--bottom-menu .menu-toggle {
+      position: absolute;
+      right: 22px;
+      top: 17px;
+      display: block;
+      width: auto;
+      cursor: pointer;
+      z-index: 999;
+      display: none; }
+    .nav--bottom-menu .nav--bottom-menu-left {
+      height: 65px;
+      overflow: hidden;
+      transition: height ease .2s;
+      text-align: center; }
+    .nav--bottom-menu .nav--bottom-menu-left.menu-active {
+      height: auto; }
     .nav--bottom-menu-left li a {
       font-size: 1.1rem;
-      font-weight: 300; }
+      font-weight: 300;
+      position: relative;
+      opacity: 0.6; }
+      .nav--bottom-menu-left li a:after {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background-color: red;
+        bottom: -9px;
+        left: 0;
+        transform: scale(0);
+        will-change: transform;
+        transition: transform ease .2s; }
       .nav--bottom-menu-left li a:hover {
+        opacity: 1;
         color: white; }
+        .nav--bottom-menu-left li a:hover:after {
+          transform: scale(1); }
     .nav--bottom-menu-right {
       text-align: right;
       text-transform: uppercase;
-      height: 75px;
+      height: 65px;
       background-color: #626262;
       overflow: hidden; }
       .nav--bottom-menu-right li {
-        line-height: 80px !important; }
+        line-height: 65px !important; }
         .nav--bottom-menu-right li a {
           font-size: 1.1rem; }
           .nav--bottom-menu-right li a:hover {
@@ -177,7 +211,8 @@ body {
 
 header {
   min-height: 400px;
-  height: 60vh;
+  min-height: 60vh;
+  height: auto;
   background: #333;
   background-position: center;
   background-size: cover;
@@ -429,9 +464,11 @@ header {
       opacity: 1;
       background: #d2232a; }
 
-.news .owl-dots > div {
-  height: 14px;
-  width: 14px; }
+.news .owl-dots {
+  height: 30px; }
+  .news .owl-dots > div {
+    height: 14px;
+    width: 14px; }
 
 footer {
   background-color: #333333; }
@@ -484,3 +521,49 @@ footer {
       cursor: default; }
       footer ul li:hover {
         color: white; }
+
+.footer-4 h3 {
+  padding-left: 0; }
+  .footer-4 h3 ul {
+    margin: 0;
+    padding: 0;
+    height: 100%; }
+  .footer-4 h3 li {
+    display: inline-block;
+    line-height: 60px;
+    padding-top: 10px;
+    margin: 0 14px; }
+
+@media (max-width: 852px) {
+  .nav--bottom-menu ul li {
+    display: block;
+    width: 100%; }
+  .nav--bottom-menu-left li a:after {
+    bottom: 0; }
+  .menu-toggle {
+    display: block !important; }
+  .nav--grid {
+    grid-template-columns: 25vw 1fr; }
+  .news {
+    height: auto; }
+  .nav--bottom-menu ul li a, .nav--top-menu ul li a {
+    margin-left: 4px;
+    margin-right: 4px; }
+  .nav--bottom-menu-left {
+    background: #4f4f4f; }
+  .nav--bottom-menu-right li a {
+    font-size: 0.9rem; }
+  .nav--bottom-menu-right {
+    display: none; } }
+
+@media (max-width: 766px) {
+  .footer-4 {
+    padding: 35px 35px;
+    text-align: center; }
+  .footer--socials {
+    display: none; }
+  header .header--content {
+    max-width: 100%;
+    margin-right: 35px; }
+  .nav--logo {
+    padding: 7px; } }

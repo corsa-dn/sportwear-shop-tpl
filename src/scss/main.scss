@@ -130,7 +130,7 @@ body {
       color: white;
       font-family: 'Ubuntu';
       font-size: 1.5rem;
-      width: auto;
+      width: 100%;
       padding-left: 14px;
       padding-right: 50px;
 
@@ -148,15 +148,53 @@ body {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     background-color: $grey;
-
+    position: relative;
+    .menu-toggle{
+      position: absolute;
+      right: 22px;
+top: 17px;
+      display: block;
+      width: auto;
+      cursor: pointer;
+      z-index: 999;
+      display: none;
+    }
+    .nav--bottom-menu-left{
+        height: 65px;
+        overflow: hidden;
+        transition: height ease .2s;
+        text-align: center;
+    }
+    .nav--bottom-menu-left.menu-active{
+        height:auto;
+    }
     &-left {
+
       li {
         a {
           font-size: 1.1rem;
           font-weight: 300;
-
+          position: relative;
+          opacity: 0.6;
+          &:after{
+            content: '';
+            display: block;
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            background-color: red;
+            bottom: -9px;
+            left: 0;
+            transform: scale(0);
+            will-change: transform;
+            transition: transform ease .2s;
+          }
           &:hover {
+          opacity: 1;
             color: white;
+            &:after{
+              transform: scale(1);
+            }
           }
         }
       }
@@ -165,12 +203,12 @@ body {
     &-right {
       text-align: right;
       text-transform: uppercase;
-      height: 75px;
+      height: 65px;
       background-color: lighten($dark-gr, 20%);
       overflow: hidden;
       // background-color:$red;
       li {
-        line-height: 80px !important;
+        line-height: 65px !important;
 
         a {
           font-size: 1.1rem;
@@ -222,7 +260,8 @@ body {
 
 header {
   min-height: 400px;
-  height: 60vh;
+  min-height: 60vh;
+  height: auto;
   background: #333;
   background-position: center;
   background-size: cover;
@@ -581,6 +620,8 @@ header {
 
 .news {
   .owl-dots {
+  height: 30px;
+
     & > div {
       height: 14px;
       width: 14px;
@@ -660,3 +701,23 @@ footer {
     }
   }
 }
+
+.footer-4{
+  h3{
+    padding-left: 0;
+    ul{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    li{
+      display: inline-block;
+      line-height: 60px;
+      padding-top: 10px;
+      margin: 0 14px;
+
+    }
+  }
+}
+
+@import 'responsive';

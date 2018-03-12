@@ -1,0 +1,79 @@
+body {
+  background-color: #e6e6e6; }
+
+.shop-list {
+  padding: 75px 0; }
+  .shop-list--item {
+    border-radius: 2px;
+    transition: box-shadow ease .2s;
+    margin-bottom: 30px;
+    position: relative; }
+    .shop-list--item:after {
+      content: '+';
+      position: absolute;
+      top: 0;
+      left: 14px;
+      font-size: 3.5rem;
+      font-weight: bold; }
+    .shop-list--item * {
+      cursor: default; }
+    .shop-list--item img {
+      display: block;
+      width: 100%;
+      height: 175px;
+      object-fit: contain;
+      object-position: center;
+      padding: 21px;
+      transition: background-color ease .2s; }
+    .shop-list--item .item--text {
+      padding: 21px;
+      background-color: #fff;
+      border-top: 2px solid #d2232a; }
+      .shop-list--item .item--text h3 {
+        font-family: 'Ubuntu';
+        font-size: 1.7rem;
+        font-weight: 300;
+        margin: 0;
+        margin-bottom: 10px; }
+      .shop-list--item .item--text p {
+        font-family: 'Ubuntu';
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 0;
+        margin-bottom: 21px; }
+      .shop-list--item .item--text ul {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 21px;
+        opacity: 0.4;
+        transition: opacity ease .2s; }
+        .shop-list--item .item--text ul:hover {
+          opacity: 1; }
+        .shop-list--item .item--text ul li {
+          display: inline-block;
+          font-family: 'Ubuntu';
+          padding: 0;
+          height: 28px;
+          width: 28px;
+          line-height: 26px;
+          text-align: center;
+          border-radius: 28px;
+          background-color: #e6e6e6;
+          color: #d2232a;
+          margin-right: 4px;
+          cursor: default; }
+      .shop-list--item .item--text a {
+        color: #333;
+        text-decoration: none;
+        font-family: 'Ubuntu';
+        font-size: 1.4rem;
+        font-weight: 300;
+        cursor: pointer; }
+        .shop-list--item .item--text a:hover {
+          text-decoration: underline; }
+    .shop-list--item:hover {
+      box-shadow: 0 0 55px 0 rgba(0, 0, 0, 0.15); }
+      .shop-list--item:hover h3 {
+        color: #d2232a; }
+      .shop-list--item:hover img {
+        background: #fff; }
