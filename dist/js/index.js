@@ -38,6 +38,6 @@ $(document).ready(function() {
 
   $('.menu-toggle').on('click', function() {
     $('.nav--bottom-menu-left').toggleClass('menu-active');
-  })
+  });
 
 });

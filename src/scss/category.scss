@@ -1,0 +1,146 @@
+@import 'variables';
+// @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic');
+// @import 'responsive';
+// @import 'common.scss';
+// @import 'reset';
+
+
+
+// header{
+// 	display: block;
+// 	height: 200px;
+// 	width: 100%;
+// 	position: relative;
+// 	img{
+// 		left: 0;
+// 		top: 0;
+// 		position: absolute;
+// 		width: 100%;
+// 		height: 100%;
+// 		object-position: center centers;
+// 		object-fit: cover;
+// 		filter: brightness(0.5);
+// 	}
+// 	h2{
+// 		font-family: 'Ubuntu';
+// 		color: white;
+// 		font-size: 3rem;
+// 		letter-spacing: 2px;
+// 		position: relative;
+// 		z-index: 10;
+// 		line-height: 200px;
+// 		text-align: center;
+
+// 	}
+// }
+
+.parallax-window{
+	h2{
+		font-family: 'Ubuntu';
+		color: white;
+		font-size: 3rem;
+		letter-spacing: 2px;
+		z-index: 10;
+		line-height: 300px;
+		text-align: center;
+	}
+}
+
+.category-list{
+	padding: 75px 0;
+	background-color: $light-gr;
+	&--item{
+		// box-shadow: 0 0 25px 0 rgba(#000, 0.05);
+		border-radius: 2px;
+		transition: box-shadow ease .2s;
+		margin-bottom: 30px;
+		position: relative;
+		&:after{
+			content: '+';
+			position: absolute;
+			top: 0;
+			left: 14px;
+			font-size: 3.5rem;
+			font-weight: bold;
+		}
+		*{
+			cursor: default;
+		}
+		img{
+			display: block;
+			width: 100%;
+			height: 175px;
+			object-fit: contain;
+			object-position: center;
+			padding: 21px;
+			transition: background-color ease .2s;
+		}
+		.item--text{
+			padding: 21px;
+			background-color: #fff;
+			border-top: 2px solid $red;
+			h3{
+				font-family: 'Ubuntu';
+				font-size: 1.7rem;
+				font-weight: 300;
+				margin: 0;
+				margin-bottom: 10px;
+			}
+			p{
+				font-family: 'Ubuntu';
+				font-size: 2rem;
+				font-weight: 300;
+				margin: 0;
+				margin-bottom: 21px;
+			}
+			ul{
+				margin: 0;
+				padding: 0;
+				margin-bottom: 21px;
+				opacity: 0.4;
+				transition: opacity ease .2s;
+				&:hover{
+					opacity:1;
+				}
+				li{
+					display: inline-block;
+					font-family: 'Ubuntu';
+					padding: 0;
+					height: 28px;
+					width: 28px;
+					line-height: 26px;
+					text-align: center;
+					border-radius: 28px;
+					background-color: $light-gr;
+					color: $red;
+					margin-right: 4px;
+					cursor: default;
+				}
+				li.n-a{
+					opacity: 0.4 !important;
+				}
+				
+			}
+			a{
+				color: #333;
+				text-decoration: none;
+				font-family: 'Ubuntu';
+				font-size: 1.4rem;
+				font-weight: 300;
+				cursor: pointer;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+		&:hover{
+			box-shadow: 0 0 55px 0 rgba(#000, 0.15);
+			h3{
+				color: $red;
+			}
+			img{
+				background: #fff;
+			}
+		}
+	}
+}

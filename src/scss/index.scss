@@ -1,0 +1,370 @@
+// @import 'common.scss';
+// @import 'reset';
+// @import 'responsive';
+// @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic');
+@import 'variables';
+
+
+header {
+  min-height: 400px;
+  min-height: 60vh;
+  height: auto;
+  background: #333;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 888;
+  filter: brightness(0.85);
+
+  .header--content {
+    margin-left: 35px;
+    width: auto;
+    max-width: 50%;
+    max-height: 100%;
+
+    &-text {
+      padding: 35px;
+      background-color: rgba(#000, 0.7);
+
+      h2 {
+        font-family: 'Ubuntu';
+        font-size: 3.5rem;
+        color: white;
+        font-weight: 300;
+        text-shadow: 4px 4px 1px rgba(#000, 0.5);
+      }
+
+      p {
+        font-family: 'Ubuntu';
+        font-size: 1.14rem;
+        line-height: 2rem;
+        color: white;
+        text-shadow: 0 0 35px rgba(#fff, 0.5);
+      }
+    }
+
+    &-action {
+      text-align: right;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      .btn {
+        display: inline-block;
+        padding: 21px 35px;
+        background-color: rgba(#000, 0.85);
+        text-transform: uppercase;
+        transition: background-color ease 0.2s;
+
+        a {
+          color: #fff;
+          font-size: 1.4rem;
+          font-family: 'Ubuntu';
+          font-weight: 300;
+          text-decoration: none;
+        }
+
+        &:hover {
+          background-color: rgba(#000, 0.9);
+        }
+      }
+
+      .btn-primary {
+        background-color: $blue;
+
+        &:hover {
+          background-color: darken($blue, 10%);
+        }
+      }
+    }
+  }
+}
+
+.slider {
+  border-top: 4px solid $red;
+  border-bottom: 4px solid $red;
+  background-color: black;
+  position: relative;
+
+  & > img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+    padding: 49px;
+  }
+
+  .item--type {
+    background-color: black;
+    filter: brightness(1);
+    position: relative;
+    padding: 21px;
+
+    h3 {
+      font-family: 'Ubuntu';
+      color: white;
+      font-weight: 300;
+      font-size: 2rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    h4 {
+      transition: color ease 0.2s;
+    }
+
+    &:hover {
+      h4 {
+        color: $blue;
+        // color: $red;
+      }
+    }
+  }
+
+  &--item {
+    height: 170px;
+    width: 100%;
+    padding: 28px 0 0 21px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-position: center;
+      object-fit: cover;
+      filter: brightness(0.5);
+    }
+
+    h4 {
+      color: white;
+      position: relative;
+      z-index: 2;
+      font-family: 'Ubuntu';
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.shop-promo {
+  padding: 100px 0 50px 0;
+  background-color: $light-gr;
+
+  &--item {
+    margin: 0 auto;
+    font-family: 'Ubuntu';
+
+    h4 {
+      font-weight: 300;
+      font-size: 1.44rem;
+      line-height: 2.1rem;
+      font-weight: 400;
+    }
+
+    p {
+      margin: 14px 0 21px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $blue;
+      font-size: 1.4rem;
+      font-weight: 300;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    img {
+      height: 140px;
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .price {
+      font-weight: 300;
+      font-size: 2.1rem;
+      line-height: 2.1rem;
+      color: $blue;
+    }
+  }
+  .btn{
+    margin: 0 auto;
+    margin-top: 28px;
+    max-width: 50%;
+    background-color: $red;
+  }
+}
+
+.custom-images {
+  .col {
+    position: relative;
+    height: 175px;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: 175px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.news {
+  height: 550px;
+  position: relative;
+
+  &--carousel {
+    height: 100%;
+
+    .item {
+      position: relative;
+      height: 550px;
+
+      img {
+        filter: brightness(0.7);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      &--text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(#000, 0.8);
+        padding: 35px 21px;
+        width: 100%;
+
+        h3 {
+          color: white;
+          font-family: 'Ubuntu';
+          font-weight: 300;
+          font-size: 2.8rem;
+        }
+
+        h4 {
+          color: white;
+          font-family: 'Ubuntu';
+          font-weight: 300;
+          text-transform: uppercase;
+          font-size: 1rem;
+          margin-top: 21px;
+        }
+      }
+    }
+  }
+
+  
+
+  &--list {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: $dark-gr;
+    padding: 28px;
+
+    h3 {
+      font-family: 'Ubuntu';
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 28px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        border-bottom: 1px solid rgba(#fff, 0.15);
+        margin-bottom: 35px;
+
+        h4 {
+          color: #fff;
+          font-family: 'Ubuntu';
+          font-size: 1.5rem;
+        }
+
+        p {
+          color: #fff;
+          font-family: 'Ubuntu';
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+.news--carousel {
+  position: relative;
+
+  .owl-dots {
+    top: 120px;
+    right: 0;
+    text-align: right;
+
+    & > div {
+      background-color: white;
+      opacity: 0.75;
+
+      &.active {
+        opacity: 1;
+        background-color: $red;
+      }
+    }
+  }
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 98%;
+  margin: 0 auto;
+  text-align: center;
+
+  & > div {
+    display: block;
+    background-color: black;
+    opacity: 0.5;
+    margin: 0 14px;
+    height: 10px;
+    width: 10px;
+    border-radius: 14px;
+    display: inline-block;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &.active {
+      opacity: 1;
+      background: $red;
+    }
+  }
+}
+
+.news {
+  .owl-dots {
+  height: 30px;
+
+    & > div {
+      height: 14px;
+      width: 14px;
+    }
+  }
+}
